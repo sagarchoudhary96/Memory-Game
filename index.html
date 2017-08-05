@@ -1,131 +1,86 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Memory Game</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--Custom style sheet-->
-    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div class="container height-100">
-      <div class="row">
-          <h1>Memory game</h1>
-          <span>Ratings:&#9733&#9733&#9733</span>
-      </div>
-       <div class="row">
-                <div class="row grid-container">
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-        </div>
-        <div class="row grid-container">
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-        </div>
-        <div class="row grid-container">
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-        </div>
-        <div class="row grid-container">
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-            <div class="card col-md-3">
-                <div class='front'>Front</div>
-                <div class='back'>
-                    <img src='http://i1.wp.com/www.randomzebra.com/wp-content/uploads/2016/02/11_Tim_Hobday_xwing.gif?fit=700%2C525'>
-                </div>
-            </div>
-        </div>
-       </div>
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">3</span> Moves
+
+            <div class="restart">
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck">
+            <li class="card">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
     </div>
-            
-                    
-                
-    <script type="text/javascript" src="script.js"></script>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
