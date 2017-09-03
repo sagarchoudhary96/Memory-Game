@@ -1,6 +1,7 @@
 /*
  * Create a list that holds all of your cards
  */
+var cardLists = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube", "fa-leaf", "fa-bicycle", "fa-bomb"];
 
 /*
  * Display the cards on the page
@@ -9,6 +10,18 @@
  *   - add each card's HTML to the page
  */
 
+// create and append card html
+function createCard(card) {
+    $('#deck').append(`<li class="card"><i class="fa ${card}"></i></li>`);
+}
+
+function generateCards() {
+    for (var i = 0;i < 2; i++){
+        cardLists = shuffle(cardLists);
+        cardLists.forEach(createCard);    
+    }
+    
+}
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -24,7 +37,56 @@ function shuffle(array) {
     return array;
 }
 
+openCards = [];
 
+function toggleCard() {
+    console.log("toggle");
+    console.log(openCards);
+    if (openCards.length === 0) {   
+        $(this).toggleClass("show open");
+        openCards.push($(this));
+        disableCLick();
+    }
+    else if (openCards.length === 1) {
+        $(this).toggleClass("show open");
+        openCards.push($(this));
+        matchOpenCards();
+    }
+    else {
+        console.log($(this));
+    }
+    
+}
+
+function disableCLick() {
+    openCards.forEach(function(card) {
+        card.off('click');
+    });
+}
+
+function enableClick() {
+   openCards[0].click(toggleCard);
+}
+
+function matchOpenCards() {
+    if (openCards[0][0].firstChild.className == openCards[1][0].firstChild.className) {
+        console.log("matchCard");
+        openCards[0].addClass("match");
+        openCards[1].addClass("match");
+        disableCLick();
+        removeOpenCards();
+    }
+    else {
+        openCards[0].toggleClass("show open");
+        openCards[1].toggleClass("show open");
+        enableClick();
+        removeOpenCards();
+    }
+}
+
+function removeOpenCards() {
+    openCards = [];
+}
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
@@ -35,3 +97,18 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+
+$('#reset-button').click(resetGame);
+
+function resetGame() {
+    $('#deck').empty();
+    playGame();
+}
+
+function playGame() {
+ generateCards();
+ $('.card').click(toggleCard);
+}
+
+
+playGame();
