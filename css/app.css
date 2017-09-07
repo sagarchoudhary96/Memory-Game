@@ -17,7 +17,8 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background: #ffffff url('../img/geometry2.png');
+    /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
 
@@ -32,6 +33,7 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
+
 
 /*
  * Styles for the deck of cards
@@ -48,7 +50,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 3em;
+    margin: 5vh 0 3em;
 }
 
 .deck .card {
@@ -81,13 +83,14 @@ h1 {
     font-size: 33px;
 }
 
+
 /*
  * Styles for the Score Panel
  */
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    width: 545px;
     margin-bottom: 10px;
 }
 
@@ -104,6 +107,112 @@ h1 {
 }
 
 .score-panel .restart {
-    float: right;
+    display: inline;
     cursor: pointer;
+    margin-left: 2vw;
+}
+
+svg {
+    width: 100px;
+    display: block;
+    margin: 25vh auto 0;
+}
+
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+}
+
+.path.circle {
+    -webkit-animation: dash 0.9s ease-in-out;
+    animation: dash 0.9s ease-in-out;
+}
+
+.path.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
+    animation: dash 0.9s 0.35s ease-in-out forwards;
+}
+
+.path.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
+    animation: dash-check 0.9s 0.35s ease-in-out forwards;
+}
+
+p {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.25em;
+}
+
+p.success {
+    color: #73AF55;
+}
+
+@-webkit-keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes dash-check {
+    0% {
+        stroke-dashoffset: -100;
+    }
+    100% {
+        stroke-dashoffset: 900;
+    }
+}
+
+@keyframes dash-check {
+    0% {
+        stroke-dashoffset: -100;
+    }
+    100% {
+        stroke-dashoffset: 900;
+    }
+}
+
+#sucess-result {
+    display: none;
+}
+
+.score-titles {
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.score-values {
+    font-weight: 100;
+    margin-right: 1vw;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.star {
+     display: inline;
+    margin: 2px;
+}
+
+.margin-top-2 {
+  margin-top: 2vh;   
+}
+
+.text-right {
+    float: right;
 }
